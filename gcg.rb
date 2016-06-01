@@ -1,6 +1,8 @@
 S3 = Aws::S3::Resource.new(region:"us-west-2")
 
 class Gcg < Sinatra::Base
+  enable :logging
+
   post "/:username" do
     username = params[:username]
 
