@@ -17,5 +17,6 @@ class Gcg < Sinatra::Base
     obj.put(body: svg, acl: "public-read")
 
     status 201
+    body "OK"
   end
 end
