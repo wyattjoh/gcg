@@ -10,7 +10,7 @@ class Gcg < Sinatra::Base
     verify_signature(username)
 
     # generate the svg image
-    svg = GithubChart.new(user: username).svg
+    svg = GithubChart.new(user: username, colors: COLOR_SCHEME).svg
 
     # upload the object to the bucket
     obj = S3.bucket(ENV["AWS_S3_BUCKET"]).object("#{username}.svg")
