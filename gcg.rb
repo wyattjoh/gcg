@@ -14,7 +14,7 @@ class Gcg < Sinatra::Base
 
     # upload the object to the bucket
     obj = S3.bucket(ENV["AWS_S3_BUCKET"]).object("#{username}.svg")
-    obj.put(body: gzip(svg), acl: "public-read", content_type: "image/svg+xml", content_encoding: "gzip")
+    obj.put(body: gzip(svg), acl: "public-read", content_type: "image/svg+xml", content_encoding: "gzip", cache_control: "public, max-age=3600")
 
     status 201
     body "OK"
