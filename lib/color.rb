@@ -17,7 +17,7 @@ def lighten_color(hex_color, amount=0.6)
   "#%02x%02x%02x" % rgb
 end
 
-base_color = "#1184a1"
+base_color = "#85001b"
 
 COLOR_SCHEME = [
   "#eeeeee",
