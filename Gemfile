@@ -1,8 +1,8 @@
 source "https://rubygems.org/"
-ruby "2.2.5"
+ruby "2.7.1"
 
-gem "sinatra", "~> 2"
+gem "sinatra"
 gem "githubchart"
 gem "aws-sdk-s3"
-gem "rake", "~> 12.3"
+gem "rake"
 gem "puma"

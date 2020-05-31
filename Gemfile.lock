@@ -1,21 +1,24 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    aws-partitions (1.71.0)
-    aws-sdk-core (3.17.1)
-      aws-partitions (~> 1.0)
-      aws-sigv4 (~> 1.0)
+    aws-eventstream (1.1.0)
+    aws-partitions (1.322.0)
+    aws-sdk-core (3.97.0)
+      aws-eventstream (~> 1, >= 1.0.2)
+      aws-partitions (~> 1, >= 1.239.0)
+      aws-sigv4 (~> 1.1)
       jmespath (~> 1.0)
-    aws-sdk-kms (1.5.0)
-      aws-sdk-core (~> 3)
-      aws-sigv4 (~> 1.0)
-    aws-sdk-s3 (1.8.2)
-      aws-sdk-core (~> 3)
+    aws-sdk-kms (1.32.0)
+      aws-sdk-core (~> 3, >= 3.71.0)
+      aws-sigv4 (~> 1.1)
+    aws-sdk-s3 (1.67.0)
+      aws-sdk-core (~> 3, >= 3.96.1)
       aws-sdk-kms (~> 1)
-      aws-sigv4 (~> 1.0)
-    aws-sigv4 (1.0.2)
+      aws-sigv4 (~> 1.1)
+    aws-sigv4 (1.1.4)
+      aws-eventstream (~> 1.0, >= 1.0.2)
     basiccache (1.0.0)
-    curb (0.9.4)
+    curb (0.9.10)
     githubchart (3.1.0)
       githubstats (~> 2.0.0)
       svgplot (~> 1.0.0)
@@ -23,20 +26,24 @@ GEM
       basiccache (~> 1.0.0)
       curb (~> 0.9.0)
       nokogiri (~> 1.8.0)
-    jmespath (1.3.1)
+    jmespath (1.4.0)
     mini_portile2 (2.3.0)
-    mustermann (1.0.3)
+    mustermann (1.1.1)
+      ruby2_keywords (~> 0.0.1)
+    nio4r (2.5.2)
     nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
-    puma (3.12.4)
-    rack (2.1.2)
-    rack-protection (2.0.2)
+    puma (4.3.5)
+      nio4r (~> 2.0)
+    rack (2.2.2)
+    rack-protection (2.0.8.1)
       rack
-    rake (12.3.3)
-    sinatra (2.0.2)
+    rake (13.0.1)
+    ruby2_keywords (0.0.2)
+    sinatra (2.0.8.1)
       mustermann (~> 1.0)
       rack (~> 2.0)
-      rack-protection (= 2.0.2)
+      rack-protection (= 2.0.8.1)
       tilt (~> 2.0)
     svgplot (1.0.0)
     tilt (2.0.10)
@@ -48,11 +55,11 @@ DEPENDENCIES
   aws-sdk-s3
   githubchart
   puma
-  rake (~> 12.3)
-  sinatra (~> 2)
+  rake
+  sinatra
 
 RUBY VERSION
-   ruby 2.2.5p319
+   ruby 2.7.1p83
 
 BUNDLED WITH
-   1.13.6
+   2.1.4
